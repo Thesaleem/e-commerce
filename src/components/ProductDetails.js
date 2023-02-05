@@ -10,8 +10,7 @@ function ProductDetails (){
     const { productid } = useParams()
     const data = useSelector(state => state.landingPage.allProducts.find(product => product.id === +productid))
     const {id, title, price, image} = data
-    const cart = useSelector(state => state.cart)
-
+    
     const increase = () => {
         setQuantity(prev => prev + 1)
     }

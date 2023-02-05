@@ -5,7 +5,6 @@ import {useState} from 'react'
 
 
 function Category (){
-    const location = useLocation()
     const [active, setActive] = useState('')
 
     const goToLink = (link) => {
