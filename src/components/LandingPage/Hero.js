@@ -1,10 +1,15 @@
 import hero from '../../assets/image_2.jpg'
 import maleHero from '../../assets/image_1.jpg'
-import { Link} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 function Hero(){
 
+  const navigate = useNavigate()
+
+  const nav = () => {
+    navigate('/products')
+  }
   const data = useSelector(state => state.landingPage.selectedLink)
     return (
       <div className="py-10 relative">
@@ -18,10 +23,8 @@ function Hero(){
             Brands Here.
           </p>
 
-          <button className="text-[10px] hover:opacity-75 md:text-[18px] lg:text-xl border border-white md:py-3 py-1 px-4 lg:py-4 lg:mt-8 md:px-7 rounded-md md:rounded-xl mt-4">
-            <Link to='/products'>
+          <button onClick={nav} className="text-[10px] hover:opacity-75 md:text-[18px] lg:text-xl border border-white md:py-3 py-1 px-4 lg:py-4 lg:mt-8 md:px-7 rounded-md md:rounded-xl mt-4">
               Shop Now
-            </Link> 
           </button>
         </div>
       </div>

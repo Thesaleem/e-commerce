@@ -1,9 +1,15 @@
 import image from '../../assets/unsplash.png'
 import logo from '../../assets/Zara_Logo.png'
-import { Link} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
 
 
 function Showcase(){
+
+  const navigate = useNavigate()
+
+  const nav = () => {
+    navigate('/products')
+  }
 
     return (
       <div className="">
@@ -19,10 +25,8 @@ function Showcase(){
               The new evening wear collection exclusively offered at the
               reopened Giorgio Armani boutique in Los Angeles.
             </p>
-            <button className="hover:opacity-75 mt-3 py-1 px-2 md:mt-10 md:py-3 md:px-6 bg-white text-black md:rounded-md">  
-              <Link to='/products'>
+            <button onClick={nav} className="hover:opacity-75 mt-3 py-1 px-2 md:mt-10 md:py-3 md:px-6 bg-white text-black md:rounded-md">  
                 See Collection
-              </Link> 
             </button>
           </div>
         </div>

@@ -1,10 +1,11 @@
 import {useDispatch, useSelector} from 'react-redux'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useNavigate } from 'react-router-dom'
 import { cartActions } from '../store/cartSlice'
 import {useState} from 'react'
 
 
 function ProductDetails (){
+    const navigate = useNavigate()
     const [quantity, setQuantity] = useState(1)
     const dispatch = useDispatch()
     const { productid } = useParams()
@@ -28,7 +29,7 @@ function ProductDetails (){
             image,
             totalPrice: quantity * price,
         }))
-        // dispatch(cartActions.emptyCart([]))
+        navigate('/cart')
     }
 
     return (
