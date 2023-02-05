@@ -32,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Page]()
-- Live Site URL: [Otiwerk e-commerce]()
+- Solution URL: [GitHub Page](https://github.com/Thesaleem/e-commerce)
+- Live Site URL: [Otiwerk e-commerce](https://e-commerce-s.netlify.app)
 
 ## My process
 
