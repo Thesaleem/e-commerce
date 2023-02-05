@@ -17,7 +17,7 @@ function ErrorPage(){
     return (
         <>
         <Header />
-        <div className="h-[80vh] border border-[red]">
+        <div className="h-[80vh]">
             <div className="font-jost flex flex-col-reverse lg:flex-row justify-center items-center pt-6 border border-[red]">
                 <div className="">
                     <h1 className="text-8xl">Oops!</h1>
